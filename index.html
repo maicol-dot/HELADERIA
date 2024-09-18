@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUEÑOS CONGELADOS CON BENDICION
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            padding: 20px;
+        }
+        .flavors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .flavor {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcc00;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SUEÑOS CONGELADOS CON BENDICION</h1>
+        <nav>
+            <a href="#sabores">Sabores</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="sabores">
+        <center>
+            <h2>NUESTROS SABORES</h2>
+        </center>
+        <div class="flavors">
+            <div class="flavor" onclick="openModal('chocolateModal')">
+                <h3>CHOCOLATE</h3>
+                <p>Delicioso helado de chocolate negro.</p>
+            </div>
+            <div class="flavor" onclick="openModal('vainillaModal')">
+                <h3>VAINILLA</h3>
+                <p>Clásico y cremoso helado de vainilla.</p>
+            </div>
+            <div class="flavor" onclick="openModal('fresaModal')">
+                <h3>FRESA</h3>
+                <p>Helado fresco y afrutado de fresa.</p>
+            </div>
+            <div class="flavor" onclick="openModal('cookiesModal')">
+                <h3>COOKIES & CREAM</h3>
+                <p>Helado de vainilla con trozos de galleta.</p>
+            </div>
+            <div class="flavor" onclick="openModal('fresasModal')">
+                <h3>FRESAS CON CREMA</h3>
+                <p>Delicioso postre de fresa y crema.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sueños Congelados Con Bendicion. Todos Los Derechos Reservados.</p>
+        <p><h2>CONTACTO</h2>
+            <p>Visítanos en nuestra tienda o contáctanos:</p>
+            <p><strong>Teléfono:</strong> (+57)3242057412</p>
+            <p><strong>Email:</strong> Maicolanaya10@gmail.com</p>
+            <p><strong>Dirección:</strong> CALLE 10, KR 13A, AGUSTIN CODAZZI, COLOMBIA</p>
+        </p>
+    </footer>
+
+    <!-- Modales -->
+    <div id="chocolateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('chocolateModal')">&times;</span>
+            <h3>Helado de Chocolate</h3>
+            <img src="imagenes/th.png" alt="Helado de Chocolate">
+            <p>Disfruta de nuestro helado de chocolate negro, hecho con los mejores ingredientes para un sabor intenso y cremoso.</p>
+        </div>
+    </div>
+
+    <div id="vainillaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('vainillaModal')">&times;</span>
+            <h3>Helado de Vainilla</h3>
+            <img src="imagenes/helado-de-vainilla.png" alt="Helado de Vainilla">
+            <p>Un clásico que nunca falla, cremoso y lleno de sabor.</p>
+        </div>
+    </div>
+
+    <div id="fresaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('fresaModal')">&times;</span>
+            <h3>Helado de Fresa</h3>
+            <img src="imagenes/fresas helado.png" alt="Helado de Fresa">
+            <p>Fresco y afrutado, perfecto para los días calurosos.</p>
+        </div>
+    </div>
+
+    <div id="cookiesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cookiesModal')">&times;</span>
+            <h3>Helado de Cookies & Cream</h3>
+            <img src="imagenes/cookies & cream.png" alt="Helado de Cookies & Cream">
+            <p>Una deliciosa mezcla de vainilla y trozos de galleta.</p>
+        </div>
+    </div>
+
+    <div id="fresasModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('fresasModal')">&times;</span>
+            <h3>Fresas con Crema</h3>
+            <img src="imagenes/fresas con crema.png" alt="Fresas con Crema">
+            <p>Un delicioso postre que combina fresas frescas con crema suave.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>
